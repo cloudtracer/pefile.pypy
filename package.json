@@ -1,0 +1,29 @@
+{
+  "name": "pefile.pypy",
+  "version": "1.0.0",
+  "description": "Modified version of pefile.py for emulated use in Pypy.js. Pefile analysis without a backend!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloudtracer/pefile.pypy.git"
+  },
+  "keywords": [
+    "pefile",
+    "pefile.py",
+    "binary",
+    "analysis"
+  ],
+  "author": "ThreatPinch <development@threatpinch.com> (https://twitter.com/ThreatPinch)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cloudtracer/pefile.pypy/issues"
+  },
+  "homepage": "https://github.com/cloudtracer/pefile.pypy#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "http": "0.0.0"
+  }
+}
