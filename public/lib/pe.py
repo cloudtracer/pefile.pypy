@@ -20,7 +20,7 @@ bindata=js.eval('bblob');
 binarydatastuff=base64.b64decode(str(bindata));
 #pe=pefile.PE(data=b);
 #print(pe.dump_info());
-#import json;
+
 pe2=pefile.PE(data=binarydatastuff)
 #testi = pe2.dump_dict()
 #print(testi)
