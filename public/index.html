@@ -171,6 +171,7 @@
       });
     }
     window.bblob = "";
+    window.newbblob = "";
     Dropzone.autoDiscover = false;
     Dropzone.autoProcessQueue = false;
     var myDropzone = new Dropzone("#dropzonediv");
@@ -524,7 +525,10 @@
             window.newbblob = "";
             var file_status = setInterval(function(){
               console.log("Checking for file");
-              if(bblob != "" && newbblob != "" ) location.reload();
+              if(bblob != "" && newbblob != "" ){
+                console.log("Error parsing file?");
+                location.reload();
+              }
               window.newbblob = JSON.parse(JSON.stringify(bblob))
 
               if(bblob != ""){
