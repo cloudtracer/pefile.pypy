@@ -523,16 +523,17 @@
             //console_exec("import js;import base64;import pefile; import encodings.utf_16_le;");
             //pypyjs.execfile('./pe.py');
             window.newbblob = "";
+            window.count = 0
             var file_status = setInterval(function(){
               //clearInterval(file_status);
               console.log("Checking for file");
-              if(bblob != "" && newbblob != "" && bblob != newbblob){
+              if(bblob != "" && newbblob != "" && bblob != newbblob && window.count > 18){
                 console.log("Error parsing file?");
                 location.reload();
               }
               if(bblob != "" && bblob != newbblob){
                 window.newbblob = JSON.parse(JSON.stringify(bblob))
-
+                window.count++
 
                 document.querySelector("#output").innerHTML = "Parsing file please wait.\r\n";
                 try{
@@ -540,6 +541,7 @@
                   //pypyjs.exec("t=js.eval('bblob');b=base64.b64decode(str(t));pe=pefile.PE(data=b);print(pe.dump_info());").then(function(){
                     bblob = "";
                     newbblob = "";
+                    window.count++
                   });
                 } catch(e){
                   document.querySelector("#output").innerHTML = "Error: File could not be parsed.";
