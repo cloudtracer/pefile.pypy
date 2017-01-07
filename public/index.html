@@ -527,13 +527,13 @@
             var file_status = setInterval(function(){
               //clearInterval(file_status);
               console.log("Checking for file");
+              window.count++
               if(bblob != "" && newbblob != "" && bblob != newbblob && window.count > 18){
                 console.log("Error parsing file?");
                 location.reload();
               }
               if(bblob != "" && bblob != newbblob){
                 window.newbblob = JSON.parse(JSON.stringify(bblob))
-                window.count++
 
                 document.querySelector("#output").innerHTML = "Parsing file please wait.\r\n";
                 try{
