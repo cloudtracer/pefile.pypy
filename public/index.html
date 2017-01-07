@@ -541,7 +541,7 @@
                   //pypyjs.exec("t=js.eval('bblob');b=base64.b64decode(str(t));pe=pefile.PE(data=b);print(pe.dump_info());").then(function(){
                     bblob = "";
                     newbblob = "";
-                    window.count++
+                    window.count = 0;
                   });
                 } catch(e){
                   document.querySelector("#output").innerHTML = "Error: File could not be parsed.";
